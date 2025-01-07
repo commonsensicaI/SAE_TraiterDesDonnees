@@ -1,0 +1,1096 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte GPS NMEA</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #map {
+            height: 600px;
+            width: 100%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carte des positions GPS</h1>
+    <p><strong>Distance totale parcourue :</strong> 2.02 km</p>
+    <p><strong>Vitesse moyenne :</strong> 20.16 km/h</p>
+    <div id="map"></div>
+    <script>
+        // Initialisation de la carte
+        var map = L.map('map').setView([46.563642, 0.384952], 13);
+
+        // Ajouter les tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter les positions sur la carte
+
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563642, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563622, 0.384955]).addTo(map)
+            .bindPopup("Vitesse : 2.04 km/h");
+    
+        L.marker([46.563610, 0.384952]).addTo(map)
+            .bindPopup("Vitesse : 1.30 km/h");
+    
+        L.marker([46.563603, 0.384947]).addTo(map)
+            .bindPopup("Vitesse : 1.30 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563602, 0.384945]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563598, 0.384942]).addTo(map)
+            .bindPopup("Vitesse : 2.41 km/h");
+    
+        L.marker([46.563593, 0.384935]).addTo(map)
+            .bindPopup("Vitesse : 2.59 km/h");
+    
+        L.marker([46.563593, 0.384928]).addTo(map)
+            .bindPopup("Vitesse : 0.74 km/h");
+    
+        L.marker([46.563590, 0.384922]).addTo(map)
+            .bindPopup("Vitesse : 0.93 km/h");
+    
+        L.marker([46.563590, 0.384922]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563590, 0.384922]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563590, 0.384922]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.563590, 0.384920]).addTo(map)
+            .bindPopup("Vitesse : 2.22 km/h");
+    
+        L.marker([46.563583, 0.384928]).addTo(map)
+            .bindPopup("Vitesse : 5.74 km/h");
+    
+        L.marker([46.563572, 0.384948]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.563555, 0.384972]).addTo(map)
+            .bindPopup("Vitesse : 7.78 km/h");
+    
+        L.marker([46.563542, 0.384993]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.563527, 0.385008]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.563513, 0.385027]).addTo(map)
+            .bindPopup("Vitesse : 6.48 km/h");
+    
+        L.marker([46.563505, 0.385045]).addTo(map)
+            .bindPopup("Vitesse : 6.11 km/h");
+    
+        L.marker([46.563493, 0.385058]).addTo(map)
+            .bindPopup("Vitesse : 6.11 km/h");
+    
+        L.marker([46.563482, 0.385077]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.563470, 0.385098]).addTo(map)
+            .bindPopup("Vitesse : 7.96 km/h");
+    
+        L.marker([46.563458, 0.385125]).addTo(map)
+            .bindPopup("Vitesse : 8.33 km/h");
+    
+        L.marker([46.563447, 0.385150]).addTo(map)
+            .bindPopup("Vitesse : 8.70 km/h");
+    
+        L.marker([46.563433, 0.385173]).addTo(map)
+            .bindPopup("Vitesse : 8.52 km/h");
+    
+        L.marker([46.563418, 0.385195]).addTo(map)
+            .bindPopup("Vitesse : 8.89 km/h");
+    
+        L.marker([46.563405, 0.385220]).addTo(map)
+            .bindPopup("Vitesse : 8.70 km/h");
+    
+        L.marker([46.563387, 0.385247]).addTo(map)
+            .bindPopup("Vitesse : 9.07 km/h");
+    
+        L.marker([46.563370, 0.385272]).addTo(map)
+            .bindPopup("Vitesse : 9.07 km/h");
+    
+        L.marker([46.563353, 0.385295]).addTo(map)
+            .bindPopup("Vitesse : 9.07 km/h");
+    
+        L.marker([46.563340, 0.385315]).addTo(map)
+            .bindPopup("Vitesse : 6.67 km/h");
+    
+        L.marker([46.563335, 0.385335]).addTo(map)
+            .bindPopup("Vitesse : 6.30 km/h");
+    
+        L.marker([46.563332, 0.385353]).addTo(map)
+            .bindPopup("Vitesse : 5.74 km/h");
+    
+        L.marker([46.563337, 0.385378]).addTo(map)
+            .bindPopup("Vitesse : 7.04 km/h");
+    
+        L.marker([46.563343, 0.385403]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.563358, 0.385427]).addTo(map)
+            .bindPopup("Vitesse : 9.07 km/h");
+    
+        L.marker([46.563383, 0.385455]).addTo(map)
+            .bindPopup("Vitesse : 10.37 km/h");
+    
+        L.marker([46.563407, 0.385490]).addTo(map)
+            .bindPopup("Vitesse : 10.37 km/h");
+    
+        L.marker([46.563428, 0.385513]).addTo(map)
+            .bindPopup("Vitesse : 10.37 km/h");
+    
+        L.marker([46.563448, 0.385538]).addTo(map)
+            .bindPopup("Vitesse : 10.74 km/h");
+    
+        L.marker([46.563470, 0.385568]).addTo(map)
+            .bindPopup("Vitesse : 11.30 km/h");
+    
+        L.marker([46.563490, 0.385592]).addTo(map)
+            .bindPopup("Vitesse : 10.56 km/h");
+    
+        L.marker([46.563513, 0.385613]).addTo(map)
+            .bindPopup("Vitesse : 10.19 km/h");
+    
+        L.marker([46.563533, 0.385637]).addTo(map)
+            .bindPopup("Vitesse : 9.63 km/h");
+    
+        L.marker([46.563547, 0.385658]).addTo(map)
+            .bindPopup("Vitesse : 5.56 km/h");
+    
+        L.marker([46.563558, 0.385675]).addTo(map)
+            .bindPopup("Vitesse : 5.56 km/h");
+    
+        L.marker([46.563570, 0.385687]).addTo(map)
+            .bindPopup("Vitesse : 5.00 km/h");
+    
+        L.marker([46.563583, 0.385692]).addTo(map)
+            .bindPopup("Vitesse : 5.00 km/h");
+    
+        L.marker([46.563597, 0.385695]).addTo(map)
+            .bindPopup("Vitesse : 5.00 km/h");
+    
+        L.marker([46.563612, 0.385685]).addTo(map)
+            .bindPopup("Vitesse : 5.93 km/h");
+    
+        L.marker([46.563628, 0.385657]).addTo(map)
+            .bindPopup("Vitesse : 10.37 km/h");
+    
+        L.marker([46.563647, 0.385625]).addTo(map)
+            .bindPopup("Vitesse : 11.11 km/h");
+    
+        L.marker([46.563668, 0.385592]).addTo(map)
+            .bindPopup("Vitesse : 11.67 km/h");
+    
+        L.marker([46.563690, 0.385553]).addTo(map)
+            .bindPopup("Vitesse : 12.78 km/h");
+    
+        L.marker([46.563718, 0.385510]).addTo(map)
+            .bindPopup("Vitesse : 13.33 km/h");
+    
+        L.marker([46.563745, 0.385463]).addTo(map)
+            .bindPopup("Vitesse : 14.45 km/h");
+    
+        L.marker([46.563783, 0.385413]).addTo(map)
+            .bindPopup("Vitesse : 16.11 km/h");
+    
+        L.marker([46.563817, 0.385362]).addTo(map)
+            .bindPopup("Vitesse : 15.93 km/h");
+    
+        L.marker([46.563848, 0.385315]).addTo(map)
+            .bindPopup("Vitesse : 16.30 km/h");
+    
+        L.marker([46.563887, 0.385273]).addTo(map)
+            .bindPopup("Vitesse : 16.67 km/h");
+    
+        L.marker([46.563923, 0.385228]).addTo(map)
+            .bindPopup("Vitesse : 16.85 km/h");
+    
+        L.marker([46.563953, 0.385180]).addTo(map)
+            .bindPopup("Vitesse : 16.67 km/h");
+    
+        L.marker([46.563985, 0.385132]).addTo(map)
+            .bindPopup("Vitesse : 17.04 km/h");
+    
+        L.marker([46.564018, 0.385087]).addTo(map)
+            .bindPopup("Vitesse : 17.41 km/h");
+    
+        L.marker([46.564047, 0.385040]).addTo(map)
+            .bindPopup("Vitesse : 16.85 km/h");
+    
+        L.marker([46.564073, 0.384995]).addTo(map)
+            .bindPopup("Vitesse : 15.00 km/h");
+    
+        L.marker([46.564090, 0.384955]).addTo(map)
+            .bindPopup("Vitesse : 12.04 km/h");
+    
+        L.marker([46.564107, 0.384918]).addTo(map)
+            .bindPopup("Vitesse : 11.11 km/h");
+    
+        L.marker([46.564122, 0.384892]).addTo(map)
+            .bindPopup("Vitesse : 7.78 km/h");
+    
+        L.marker([46.564130, 0.384872]).addTo(map)
+            .bindPopup("Vitesse : 7.22 km/h");
+    
+        L.marker([46.564142, 0.384843]).addTo(map)
+            .bindPopup("Vitesse : 10.19 km/h");
+    
+        L.marker([46.564160, 0.384810]).addTo(map)
+            .bindPopup("Vitesse : 12.22 km/h");
+    
+        L.marker([46.564180, 0.384777]).addTo(map)
+            .bindPopup("Vitesse : 11.85 km/h");
+    
+        L.marker([46.564198, 0.384745]).addTo(map)
+            .bindPopup("Vitesse : 11.30 km/h");
+    
+        L.marker([46.564217, 0.384720]).addTo(map)
+            .bindPopup("Vitesse : 9.63 km/h");
+    
+        L.marker([46.564233, 0.384695]).addTo(map)
+            .bindPopup("Vitesse : 6.85 km/h");
+    
+        L.marker([46.564243, 0.384675]).addTo(map)
+            .bindPopup("Vitesse : 3.33 km/h");
+    
+        L.marker([46.564247, 0.384660]).addTo(map)
+            .bindPopup("Vitesse : 4.63 km/h");
+    
+        L.marker([46.564252, 0.384633]).addTo(map)
+            .bindPopup("Vitesse : 9.26 km/h");
+    
+        L.marker([46.564250, 0.384595]).addTo(map)
+            .bindPopup("Vitesse : 12.22 km/h");
+    
+        L.marker([46.564233, 0.384548]).addTo(map)
+            .bindPopup("Vitesse : 15.93 km/h");
+    
+        L.marker([46.564202, 0.384503]).addTo(map)
+            .bindPopup("Vitesse : 16.48 km/h");
+    
+        L.marker([46.564163, 0.384460]).addTo(map)
+            .bindPopup("Vitesse : 19.26 km/h");
+    
+        L.marker([46.564122, 0.384407]).addTo(map)
+            .bindPopup("Vitesse : 20.93 km/h");
+    
+        L.marker([46.564072, 0.384357]).addTo(map)
+            .bindPopup("Vitesse : 22.96 km/h");
+    
+        L.marker([46.564028, 0.384307]).addTo(map)
+            .bindPopup("Vitesse : 22.41 km/h");
+    
+        L.marker([46.563980, 0.384253]).addTo(map)
+            .bindPopup("Vitesse : 21.30 km/h");
+    
+        L.marker([46.563940, 0.384200]).addTo(map)
+            .bindPopup("Vitesse : 19.45 km/h");
+    
+        L.marker([46.563908, 0.384140]).addTo(map)
+            .bindPopup("Vitesse : 20.56 km/h");
+    
+        L.marker([46.563897, 0.384072]).addTo(map)
+            .bindPopup("Vitesse : 20.00 km/h");
+    
+        L.marker([46.563902, 0.384005]).addTo(map)
+            .bindPopup("Vitesse : 20.56 km/h");
+    
+        L.marker([46.563935, 0.383938]).addTo(map)
+            .bindPopup("Vitesse : 22.96 km/h");
+    
+        L.marker([46.563980, 0.383875]).addTo(map)
+            .bindPopup("Vitesse : 26.11 km/h");
+    
+        L.marker([46.564032, 0.383803]).addTo(map)
+            .bindPopup("Vitesse : 28.34 km/h");
+    
+        L.marker([46.564078, 0.383727]).addTo(map)
+            .bindPopup("Vitesse : 27.97 km/h");
+    
+        L.marker([46.564127, 0.383657]).addTo(map)
+            .bindPopup("Vitesse : 26.48 km/h");
+    
+        L.marker([46.564173, 0.383588]).addTo(map)
+            .bindPopup("Vitesse : 25.19 km/h");
+    
+        L.marker([46.564218, 0.383523]).addTo(map)
+            .bindPopup("Vitesse : 24.45 km/h");
+    
+        L.marker([46.564258, 0.383462]).addTo(map)
+            .bindPopup("Vitesse : 21.67 km/h");
+    
+        L.marker([46.564293, 0.383405]).addTo(map)
+            .bindPopup("Vitesse : 19.26 km/h");
+    
+        L.marker([46.564325, 0.383357]).addTo(map)
+            .bindPopup("Vitesse : 17.96 km/h");
+    
+        L.marker([46.564360, 0.383312]).addTo(map)
+            .bindPopup("Vitesse : 17.04 km/h");
+    
+        L.marker([46.564392, 0.383272]).addTo(map)
+            .bindPopup("Vitesse : 15.93 km/h");
+    
+        L.marker([46.564417, 0.383237]).addTo(map)
+            .bindPopup("Vitesse : 13.15 km/h");
+    
+        L.marker([46.564435, 0.383210]).addTo(map)
+            .bindPopup("Vitesse : 8.33 km/h");
+    
+        L.marker([46.564447, 0.383195]).addTo(map)
+            .bindPopup("Vitesse : 3.70 km/h");
+    
+        L.marker([46.564450, 0.383187]).addTo(map)
+            .bindPopup("Vitesse : 0.93 km/h");
+    
+        L.marker([46.564448, 0.383182]).addTo(map)
+            .bindPopup("Vitesse : 0.56 km/h");
+    
+        L.marker([46.564448, 0.383182]).addTo(map)
+            .bindPopup("Vitesse : 0.56 km/h");
+    
+        L.marker([46.564448, 0.383182]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.564448, 0.383182]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.564448, 0.383182]).addTo(map)
+            .bindPopup("Vitesse : 0.00 km/h");
+    
+        L.marker([46.564450, 0.383170]).addTo(map)
+            .bindPopup("Vitesse : 5.00 km/h");
+    
+        L.marker([46.564453, 0.383137]).addTo(map)
+            .bindPopup("Vitesse : 12.96 km/h");
+    
+        L.marker([46.564450, 0.383085]).addTo(map)
+            .bindPopup("Vitesse : 15.56 km/h");
+    
+        L.marker([46.564432, 0.383033]).addTo(map)
+            .bindPopup("Vitesse : 17.22 km/h");
+    
+        L.marker([46.564383, 0.382977]).addTo(map)
+            .bindPopup("Vitesse : 17.22 km/h");
+    
+        L.marker([46.564342, 0.382937]).addTo(map)
+            .bindPopup("Vitesse : 17.22 km/h");
+    
+        L.marker([46.564302, 0.382893]).addTo(map)
+            .bindPopup("Vitesse : 18.33 km/h");
+    
+        L.marker([46.564265, 0.382848]).addTo(map)
+            .bindPopup("Vitesse : 20.00 km/h");
+    
+        L.marker([46.564228, 0.382802]).addTo(map)
+            .bindPopup("Vitesse : 19.26 km/h");
+    
+        L.marker([46.564202, 0.382752]).addTo(map)
+            .bindPopup("Vitesse : 16.48 km/h");
+    
+        L.marker([46.564193, 0.382697]).addTo(map)
+            .bindPopup("Vitesse : 15.74 km/h");
+    
+        L.marker([46.564205, 0.382635]).addTo(map)
+            .bindPopup("Vitesse : 16.48 km/h");
+    
+        L.marker([46.564233, 0.382582]).addTo(map)
+            .bindPopup("Vitesse : 20.00 km/h");
+    
+        L.marker([46.564272, 0.382527]).addTo(map)
+            .bindPopup("Vitesse : 22.41 km/h");
+    
+        L.marker([46.564307, 0.382458]).addTo(map)
+            .bindPopup("Vitesse : 24.08 km/h");
+    
+        L.marker([46.564338, 0.382383]).addTo(map)
+            .bindPopup("Vitesse : 24.45 km/h");
+    
+        L.marker([46.564358, 0.382302]).addTo(map)
+            .bindPopup("Vitesse : 25.00 km/h");
+    
+        L.marker([46.564367, 0.382210]).addTo(map)
+            .bindPopup("Vitesse : 25.56 km/h");
+    
+        L.marker([46.564370, 0.382122]).addTo(map)
+            .bindPopup("Vitesse : 25.93 km/h");
+    
+        L.marker([46.564372, 0.382027]).addTo(map)
+            .bindPopup("Vitesse : 26.48 km/h");
+    
+        L.marker([46.564372, 0.381928]).addTo(map)
+            .bindPopup("Vitesse : 26.30 km/h");
+    
+        L.marker([46.564368, 0.381838]).addTo(map)
+            .bindPopup("Vitesse : 24.82 km/h");
+    
+        L.marker([46.564370, 0.381760]).addTo(map)
+            .bindPopup("Vitesse : 20.19 km/h");
+    
+        L.marker([46.564382, 0.381685]).addTo(map)
+            .bindPopup("Vitesse : 22.22 km/h");
+    
+        L.marker([46.564393, 0.381598]).addTo(map)
+            .bindPopup("Vitesse : 26.30 km/h");
+    
+        L.marker([46.564408, 0.381502]).addTo(map)
+            .bindPopup("Vitesse : 27.59 km/h");
+    
+        L.marker([46.564432, 0.381412]).addTo(map)
+            .bindPopup("Vitesse : 28.52 km/h");
+    
+        L.marker([46.564460, 0.381315]).addTo(map)
+            .bindPopup("Vitesse : 29.45 km/h");
+    
+        L.marker([46.564495, 0.381217]).addTo(map)
+            .bindPopup("Vitesse : 30.56 km/h");
+    
+        L.marker([46.564533, 0.381122]).addTo(map)
+            .bindPopup("Vitesse : 29.82 km/h");
+    
+        L.marker([46.564577, 0.381032]).addTo(map)
+            .bindPopup("Vitesse : 29.08 km/h");
+    
+        L.marker([46.564612, 0.380948]).addTo(map)
+            .bindPopup("Vitesse : 24.08 km/h");
+    
+        L.marker([46.564635, 0.380887]).addTo(map)
+            .bindPopup("Vitesse : 19.08 km/h");
+    
+        L.marker([46.564655, 0.380832]).addTo(map)
+            .bindPopup("Vitesse : 18.89 km/h");
+    
+        L.marker([46.564685, 0.380777]).addTo(map)
+            .bindPopup("Vitesse : 20.56 km/h");
+    
+        L.marker([46.564720, 0.380725]).addTo(map)
+            .bindPopup("Vitesse : 20.00 km/h");
+    
+        L.marker([46.564770, 0.380683]).addTo(map)
+            .bindPopup("Vitesse : 20.19 km/h");
+    
+        L.marker([46.564820, 0.380660]).addTo(map)
+            .bindPopup("Vitesse : 20.93 km/h");
+    
+        L.marker([46.564880, 0.380658]).addTo(map)
+            .bindPopup("Vitesse : 21.48 km/h");
+    
+        L.marker([46.564960, 0.380667]).addTo(map)
+            .bindPopup("Vitesse : 25.56 km/h");
+    
+        L.marker([46.565043, 0.380700]).addTo(map)
+            .bindPopup("Vitesse : 27.59 km/h");
+    
+        L.marker([46.565130, 0.380738]).addTo(map)
+            .bindPopup("Vitesse : 28.89 km/h");
+    
+        L.marker([46.565217, 0.380785]).addTo(map)
+            .bindPopup("Vitesse : 30.56 km/h");
+    
+        L.marker([46.565300, 0.380830]).addTo(map)
+            .bindPopup("Vitesse : 30.93 km/h");
+    
+        L.marker([46.565378, 0.380860]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.565450, 0.380897]).addTo(map)
+            .bindPopup("Vitesse : 29.45 km/h");
+    
+        L.marker([46.565518, 0.380930]).addTo(map)
+            .bindPopup("Vitesse : 29.08 km/h");
+    
+        L.marker([46.565592, 0.380957]).addTo(map)
+            .bindPopup("Vitesse : 28.89 km/h");
+    
+        L.marker([46.565670, 0.380990]).addTo(map)
+            .bindPopup("Vitesse : 29.45 km/h");
+    
+        L.marker([46.565745, 0.381022]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.565823, 0.381060]).addTo(map)
+            .bindPopup("Vitesse : 31.85 km/h");
+    
+        L.marker([46.565903, 0.381100]).addTo(map)
+            .bindPopup("Vitesse : 31.48 km/h");
+    
+        L.marker([46.565977, 0.381135]).addTo(map)
+            .bindPopup("Vitesse : 31.85 km/h");
+    
+        L.marker([46.566052, 0.381170]).addTo(map)
+            .bindPopup("Vitesse : 31.11 km/h");
+    
+        L.marker([46.566128, 0.381210]).addTo(map)
+            .bindPopup("Vitesse : 30.37 km/h");
+    
+        L.marker([46.566203, 0.381243]).addTo(map)
+            .bindPopup("Vitesse : 29.82 km/h");
+    
+        L.marker([46.566273, 0.381283]).addTo(map)
+            .bindPopup("Vitesse : 30.00 km/h");
+    
+        L.marker([46.566342, 0.381318]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.566415, 0.381350]).addTo(map)
+            .bindPopup("Vitesse : 31.67 km/h");
+    
+        L.marker([46.566488, 0.381393]).addTo(map)
+            .bindPopup("Vitesse : 32.78 km/h");
+    
+        L.marker([46.566563, 0.381433]).addTo(map)
+            .bindPopup("Vitesse : 32.60 km/h");
+    
+        L.marker([46.566638, 0.381473]).addTo(map)
+            .bindPopup("Vitesse : 31.30 km/h");
+    
+        L.marker([46.566713, 0.381510]).addTo(map)
+            .bindPopup("Vitesse : 31.85 km/h");
+    
+        L.marker([46.566793, 0.381548]).addTo(map)
+            .bindPopup("Vitesse : 32.41 km/h");
+    
+        L.marker([46.566862, 0.381582]).addTo(map)
+            .bindPopup("Vitesse : 29.08 km/h");
+    
+        L.marker([46.566923, 0.381608]).addTo(map)
+            .bindPopup("Vitesse : 22.78 km/h");
+    
+        L.marker([46.566975, 0.381640]).addTo(map)
+            .bindPopup("Vitesse : 22.96 km/h");
+    
+        L.marker([46.567028, 0.381668]).addTo(map)
+            .bindPopup("Vitesse : 23.15 km/h");
+    
+        L.marker([46.567085, 0.381702]).addTo(map)
+            .bindPopup("Vitesse : 24.82 km/h");
+    
+        L.marker([46.567145, 0.381737]).addTo(map)
+            .bindPopup("Vitesse : 24.82 km/h");
+    
+        L.marker([46.567203, 0.381767]).addTo(map)
+            .bindPopup("Vitesse : 23.52 km/h");
+    
+        L.marker([46.567260, 0.381795]).addTo(map)
+            .bindPopup("Vitesse : 22.41 km/h");
+    
+        L.marker([46.567317, 0.381817]).addTo(map)
+            .bindPopup("Vitesse : 21.85 km/h");
+    
+        L.marker([46.567373, 0.381842]).addTo(map)
+            .bindPopup("Vitesse : 23.34 km/h");
+    
+        L.marker([46.567432, 0.381868]).addTo(map)
+            .bindPopup("Vitesse : 23.15 km/h");
+    
+        L.marker([46.567498, 0.381902]).addTo(map)
+            .bindPopup("Vitesse : 29.08 km/h");
+    
+        L.marker([46.567573, 0.381935]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.567648, 0.381968]).addTo(map)
+            .bindPopup("Vitesse : 29.08 km/h");
+    
+        L.marker([46.567723, 0.382002]).addTo(map)
+            .bindPopup("Vitesse : 28.52 km/h");
+    
+        L.marker([46.567797, 0.382035]).addTo(map)
+            .bindPopup("Vitesse : 28.71 km/h");
+    
+        L.marker([46.567867, 0.382073]).addTo(map)
+            .bindPopup("Vitesse : 29.63 km/h");
+    
+        L.marker([46.567947, 0.382107]).addTo(map)
+            .bindPopup("Vitesse : 30.00 km/h");
+    
+        L.marker([46.568025, 0.382150]).addTo(map)
+            .bindPopup("Vitesse : 30.56 km/h");
+    
+        L.marker([46.568108, 0.382182]).addTo(map)
+            .bindPopup("Vitesse : 30.93 km/h");
+    
+        L.marker([46.568192, 0.382213]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.568272, 0.382252]).addTo(map)
+            .bindPopup("Vitesse : 29.63 km/h");
+    
+        L.marker([46.568343, 0.382292]).addTo(map)
+            .bindPopup("Vitesse : 28.15 km/h");
+    
+        L.marker([46.568407, 0.382323]).addTo(map)
+            .bindPopup("Vitesse : 23.89 km/h");
+    
+        L.marker([46.568465, 0.382353]).addTo(map)
+            .bindPopup("Vitesse : 23.52 km/h");
+    
+        L.marker([46.568523, 0.382377]).addTo(map)
+            .bindPopup("Vitesse : 23.34 km/h");
+    
+        L.marker([46.568585, 0.382385]).addTo(map)
+            .bindPopup("Vitesse : 24.45 km/h");
+    
+        L.marker([46.568647, 0.382403]).addTo(map)
+            .bindPopup("Vitesse : 25.00 km/h");
+    
+        L.marker([46.568707, 0.382423]).addTo(map)
+            .bindPopup("Vitesse : 25.37 km/h");
+    
+        L.marker([46.568767, 0.382448]).addTo(map)
+            .bindPopup("Vitesse : 24.63 km/h");
+    
+        L.marker([46.568820, 0.382475]).addTo(map)
+            .bindPopup("Vitesse : 22.41 km/h");
+    
+        L.marker([46.568873, 0.382497]).addTo(map)
+            .bindPopup("Vitesse : 20.19 km/h");
+    
+        L.marker([46.568925, 0.382517]).addTo(map)
+            .bindPopup("Vitesse : 17.59 km/h");
+    
+        L.marker([46.568968, 0.382545]).addTo(map)
+            .bindPopup("Vitesse : 15.56 km/h");
+    
+        L.marker([46.569005, 0.382587]).addTo(map)
+            .bindPopup("Vitesse : 18.15 km/h");
+    
+        L.marker([46.569032, 0.382652]).addTo(map)
+            .bindPopup("Vitesse : 21.30 km/h");
+    
+        L.marker([46.569047, 0.382738]).addTo(map)
+            .bindPopup("Vitesse : 25.19 km/h");
+    
+        L.marker([46.569043, 0.382837]).addTo(map)
+            .bindPopup("Vitesse : 28.52 km/h");
+    
+        L.marker([46.569023, 0.382943]).addTo(map)
+            .bindPopup("Vitesse : 31.11 km/h");
+    
+        L.marker([46.569000, 0.383052]).addTo(map)
+            .bindPopup("Vitesse : 33.34 km/h");
+    
+        L.marker([46.568977, 0.383165]).addTo(map)
+            .bindPopup("Vitesse : 32.22 km/h");
+    
+        L.marker([46.568945, 0.383278]).addTo(map)
+            .bindPopup("Vitesse : 35.00 km/h");
+    
+        L.marker([46.568915, 0.383398]).addTo(map)
+            .bindPopup("Vitesse : 36.48 km/h");
+    
+        L.marker([46.568882, 0.383527]).addTo(map)
+            .bindPopup("Vitesse : 38.34 km/h");
+    
+        L.marker([46.568848, 0.383663]).addTo(map)
+            .bindPopup("Vitesse : 40.56 km/h");
+    
+        L.marker([46.568815, 0.383803]).addTo(map)
+            .bindPopup("Vitesse : 41.86 km/h");
+    
+        L.marker([46.568782, 0.383947]).addTo(map)
+            .bindPopup("Vitesse : 42.41 km/h");
+    
+        L.marker([46.568743, 0.384092]).addTo(map)
+            .bindPopup("Vitesse : 43.34 km/h");
+    
+        L.marker([46.568707, 0.384245]).addTo(map)
+            .bindPopup("Vitesse : 44.08 km/h");
+    
+        L.marker([46.568668, 0.384387]).addTo(map)
+            .bindPopup("Vitesse : 44.08 km/h");
+    
+        L.marker([46.568630, 0.384538]).addTo(map)
+            .bindPopup("Vitesse : 44.08 km/h");
+    
+        L.marker([46.568592, 0.384693]).addTo(map)
+            .bindPopup("Vitesse : 43.89 km/h");
+    
+        L.marker([46.568555, 0.384850]).addTo(map)
+            .bindPopup("Vitesse : 43.89 km/h");
+    
+        L.marker([46.568517, 0.385000]).addTo(map)
+            .bindPopup("Vitesse : 43.34 km/h");
+    
+        L.marker([46.568480, 0.385150]).addTo(map)
+            .bindPopup("Vitesse : 43.15 km/h");
+    
+        L.marker([46.568442, 0.385302]).addTo(map)
+            .bindPopup("Vitesse : 43.34 km/h");
+    
+        L.marker([46.568407, 0.385450]).addTo(map)
+            .bindPopup("Vitesse : 43.15 km/h");
+    
+        L.marker([46.568372, 0.385592]).addTo(map)
+            .bindPopup("Vitesse : 42.60 km/h");
+    
+        L.marker([46.568338, 0.385738]).addTo(map)
+            .bindPopup("Vitesse : 42.04 km/h");
+    
+        L.marker([46.568305, 0.385875]).addTo(map)
+            .bindPopup("Vitesse : 41.86 km/h");
+    
+        L.marker([46.568270, 0.386017]).addTo(map)
+            .bindPopup("Vitesse : 41.11 km/h");
+    
+        L.marker([46.568240, 0.386157]).addTo(map)
+            .bindPopup("Vitesse : 40.37 km/h");
+    
+        L.marker([46.568208, 0.386292]).addTo(map)
+            .bindPopup("Vitesse : 39.82 km/h");
+    
+        L.marker([46.568182, 0.386425]).addTo(map)
+            .bindPopup("Vitesse : 38.89 km/h");
+    
+        L.marker([46.568150, 0.386557]).addTo(map)
+            .bindPopup("Vitesse : 38.34 km/h");
+    
+        L.marker([46.568117, 0.386687]).addTo(map)
+            .bindPopup("Vitesse : 37.78 km/h");
+    
+        L.marker([46.568085, 0.386815]).addTo(map)
+            .bindPopup("Vitesse : 37.23 km/h");
+    
+        L.marker([46.568055, 0.386945]).addTo(map)
+            .bindPopup("Vitesse : 36.48 km/h");
+    
+        L.marker([46.568030, 0.387070]).addTo(map)
+            .bindPopup("Vitesse : 36.11 km/h");
+    
+        L.marker([46.567998, 0.387190]).addTo(map)
+            .bindPopup("Vitesse : 35.19 km/h");
+    
+        L.marker([46.567970, 0.387303]).addTo(map)
+            .bindPopup("Vitesse : 32.41 km/h");
+    
+        L.marker([46.567945, 0.387405]).addTo(map)
+            .bindPopup("Vitesse : 27.97 km/h");
+    
+        L.marker([46.567927, 0.387495]).addTo(map)
+            .bindPopup("Vitesse : 24.26 km/h");
+    
+        L.marker([46.567905, 0.387570]).addTo(map)
+            .bindPopup("Vitesse : 21.85 km/h");
+    
+        L.marker([46.567883, 0.387638]).addTo(map)
+            .bindPopup("Vitesse : 19.82 km/h");
+    
+        L.marker([46.567857, 0.387702]).addTo(map)
+            .bindPopup("Vitesse : 18.15 km/h");
+    
+        L.marker([46.567828, 0.387760]).addTo(map)
+            .bindPopup("Vitesse : 17.78 km/h");
+    
+        L.marker([46.567790, 0.387805]).addTo(map)
+            .bindPopup("Vitesse : 21.48 km/h");
+    
+        L.marker([46.567747, 0.387852]).addTo(map)
+            .bindPopup("Vitesse : 24.26 km/h");
+    
+        L.marker([46.567693, 0.387895]).addTo(map)
+            .bindPopup("Vitesse : 25.56 km/h");
+    
+        L.marker([46.567630, 0.387925]).addTo(map)
+            .bindPopup("Vitesse : 26.85 km/h");
+    
+        L.marker([46.567560, 0.387932]).addTo(map)
+            .bindPopup("Vitesse : 29.26 km/h");
+    
+        L.marker([46.567488, 0.387918]).addTo(map)
+            .bindPopup("Vitesse : 27.22 km/h");
+    
+        L.marker([46.567425, 0.387893]).addTo(map)
+            .bindPopup("Vitesse : 27.97 km/h");
+    
+        L.marker([46.567358, 0.387860]).addTo(map)
+            .bindPopup("Vitesse : 27.78 km/h");
+    
+        L.marker([46.567295, 0.387818]).addTo(map)
+            .bindPopup("Vitesse : 29.26 km/h");
+    
+        L.marker([46.567233, 0.387767]).addTo(map)
+            .bindPopup("Vitesse : 29.26 km/h");
+    
+        L.marker([46.567177, 0.387710]).addTo(map)
+            .bindPopup("Vitesse : 29.82 km/h");
+    
+        L.marker([46.567110, 0.387655]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.567042, 0.387593]).addTo(map)
+            .bindPopup("Vitesse : 32.04 km/h");
+    
+        L.marker([46.566973, 0.387530]).addTo(map)
+            .bindPopup("Vitesse : 32.22 km/h");
+    
+        L.marker([46.566902, 0.387470]).addTo(map)
+            .bindPopup("Vitesse : 32.60 km/h");
+    
+        L.marker([46.566830, 0.387407]).addTo(map)
+            .bindPopup("Vitesse : 32.41 km/h");
+    
+        L.marker([46.566762, 0.387348]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.566695, 0.387290]).addTo(map)
+            .bindPopup("Vitesse : 30.37 km/h");
+    
+        L.marker([46.566630, 0.387235]).addTo(map)
+            .bindPopup("Vitesse : 29.45 km/h");
+    
+        L.marker([46.566567, 0.387180]).addTo(map)
+            .bindPopup("Vitesse : 29.82 km/h");
+    
+        L.marker([46.566502, 0.387117]).addTo(map)
+            .bindPopup("Vitesse : 30.93 km/h");
+    
+        L.marker([46.566438, 0.387053]).addTo(map)
+            .bindPopup("Vitesse : 31.11 km/h");
+    
+        L.marker([46.566372, 0.386987]).addTo(map)
+            .bindPopup("Vitesse : 32.60 km/h");
+    
+        L.marker([46.566308, 0.386923]).addTo(map)
+            .bindPopup("Vitesse : 32.78 km/h");
+    
+        L.marker([46.566240, 0.386858]).addTo(map)
+            .bindPopup("Vitesse : 32.97 km/h");
+    
+        L.marker([46.566175, 0.386795]).addTo(map)
+            .bindPopup("Vitesse : 32.60 km/h");
+    
+        L.marker([46.566113, 0.386725]).addTo(map)
+            .bindPopup("Vitesse : 31.48 km/h");
+    
+        L.marker([46.566048, 0.386657]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.565987, 0.386582]).addTo(map)
+            .bindPopup("Vitesse : 31.30 km/h");
+    
+        L.marker([46.565930, 0.386502]).addTo(map)
+            .bindPopup("Vitesse : 31.30 km/h");
+    
+        L.marker([46.565878, 0.386418]).addTo(map)
+            .bindPopup("Vitesse : 30.93 km/h");
+    
+        L.marker([46.565828, 0.386335]).addTo(map)
+            .bindPopup("Vitesse : 30.00 km/h");
+    
+        L.marker([46.565787, 0.386247]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.565743, 0.386157]).addTo(map)
+            .bindPopup("Vitesse : 29.82 km/h");
+    
+        L.marker([46.565703, 0.386065]).addTo(map)
+            .bindPopup("Vitesse : 30.00 km/h");
+    
+        L.marker([46.565670, 0.385963]).addTo(map)
+            .bindPopup("Vitesse : 30.56 km/h");
+    
+        L.marker([46.565642, 0.385862]).addTo(map)
+            .bindPopup("Vitesse : 29.63 km/h");
+    
+        L.marker([46.565623, 0.385757]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.565605, 0.385650]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.565588, 0.385545]).addTo(map)
+            .bindPopup("Vitesse : 30.19 km/h");
+    
+        L.marker([46.565568, 0.385435]).addTo(map)
+            .bindPopup("Vitesse : 30.74 km/h");
+    
+        L.marker([46.565552, 0.385332]).addTo(map)
+            .bindPopup("Vitesse : 29.45 km/h");
+    
+        L.marker([46.565538, 0.385242]).addTo(map)
+            .bindPopup("Vitesse : 23.71 km/h");
+    
+        L.marker([46.565528, 0.385168]).addTo(map)
+            .bindPopup("Vitesse : 19.26 km/h");
+    
+        L.marker([46.565523, 0.385105]).addTo(map)
+            .bindPopup("Vitesse : 17.78 km/h");
+    
+        L.marker([46.565528, 0.385038]).addTo(map)
+            .bindPopup("Vitesse : 19.08 km/h");
+    
+        L.marker([46.565537, 0.384968]).addTo(map)
+            .bindPopup("Vitesse : 18.89 km/h");
+    
+        L.marker([46.565542, 0.384902]).addTo(map)
+            .bindPopup("Vitesse : 18.33 km/h");
+    
+        L.marker([46.565527, 0.384838]).addTo(map)
+            .bindPopup("Vitesse : 17.78 km/h");
+    
+        L.marker([46.565490, 0.384800]).addTo(map)
+            .bindPopup("Vitesse : 18.71 km/h");
+    
+        L.marker([46.565438, 0.384798]).addTo(map)
+            .bindPopup("Vitesse : 20.00 km/h");
+    
+        L.marker([46.565393, 0.384842]).addTo(map)
+            .bindPopup("Vitesse : 21.67 km/h");
+    
+        L.marker([46.565367, 0.384912]).addTo(map)
+            .bindPopup("Vitesse : 22.59 km/h");
+    
+        L.marker([46.565340, 0.384988]).addTo(map)
+            .bindPopup("Vitesse : 22.96 km/h");
+    
+        L.marker([46.565303, 0.385048]).addTo(map)
+            .bindPopup("Vitesse : 22.41 km/h");
+    
+        L.marker([46.565257, 0.385097]).addTo(map)
+            .bindPopup("Vitesse : 24.08 km/h");
+    
+        L.marker([46.565208, 0.385148]).addTo(map)
+            .bindPopup("Vitesse : 24.63 km/h");
+    
+        L.marker([46.565157, 0.385208]).addTo(map)
+            .bindPopup("Vitesse : 24.08 km/h");
+    
+        L.marker([46.565110, 0.385262]).addTo(map)
+            .bindPopup("Vitesse : 23.34 km/h");
+    
+        L.marker([46.565065, 0.385312]).addTo(map)
+            .bindPopup("Vitesse : 21.30 km/h");
+    
+        L.marker([46.565025, 0.385352]).addTo(map)
+            .bindPopup("Vitesse : 18.71 km/h");
+    
+        L.marker([46.564985, 0.385377]).addTo(map)
+            .bindPopup("Vitesse : 16.67 km/h");
+    
+        L.marker([46.564942, 0.385372]).addTo(map)
+            .bindPopup("Vitesse : 19.08 km/h");
+    
+        L.marker([46.564898, 0.385345]).addTo(map)
+            .bindPopup("Vitesse : 21.48 km/h");
+    
+        L.marker([46.564855, 0.385293]).addTo(map)
+            .bindPopup("Vitesse : 21.11 km/h");
+    
+        L.marker([46.564812, 0.385242]).addTo(map)
+            .bindPopup("Vitesse : 21.30 km/h");
+    
+        L.marker([46.564770, 0.385195]).addTo(map)
+            .bindPopup("Vitesse : 21.11 km/h");
+    
+        L.marker([46.564725, 0.385157]).addTo(map)
+            .bindPopup("Vitesse : 19.63 km/h");
+    
+        L.marker([46.564678, 0.385128]).addTo(map)
+            .bindPopup("Vitesse : 19.08 km/h");
+    
+        L.marker([46.564640, 0.385102]).addTo(map)
+            .bindPopup("Vitesse : 18.33 km/h");
+    
+        L.marker([46.564602, 0.385065]).addTo(map)
+            .bindPopup("Vitesse : 17.04 km/h");
+    
+        L.marker([46.564568, 0.385017]).addTo(map)
+            .bindPopup("Vitesse : 16.67 km/h");
+    
+        L.marker([46.564537, 0.384970]).addTo(map)
+            .bindPopup("Vitesse : 12.04 km/h");
+    
+        L.marker([46.564518, 0.384947]).addTo(map)
+            .bindPopup("Vitesse : 8.33 km/h");
+    
+        L.marker([46.564508, 0.384935]).addTo(map)
+            .bindPopup("Vitesse : 2.96 km/h");
+    
+        L.marker([46.564510, 0.384935]).addTo(map)
+            .bindPopup("Vitesse : 1.30 km/h");
+    
+        L.marker([46.564510, 0.384940]).addTo(map)
+            .bindPopup("Vitesse : 1.48 km/h");
+    
+    </script>
+</body>
+</html>

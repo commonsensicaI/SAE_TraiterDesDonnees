@@ -38,62 +38,58 @@ for i in range(1, len(positions)):
 
 average_speed = sum(p[2] for p in positions) / len(positions)
 
-# Génération de la page HTML avec carte Leaflet
+# Génération de la page HTML avec une carte
 html_content = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats NMEA GPS</title>
+    <title>Carte GPS NMEA</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         body {{
             font-family: Arial, sans-serif;
             margin: 20px;
         }}
-        h1 {{
-            color: #333;
-        }}
         #map {{
-            height: 500px;
+            height: 600px;
+            width: 100%;
             margin: 20px auto;
-            width: 80%;
         }}
     </style>
 </head>
 <body>
-    <h1>Analyse des trames NMEA GPS</h1>
+    <h1>Carte des positions GPS</h1>
     <p><strong>Distance totale parcourue :</strong> {total_distance:.2f} km</p>
     <p><strong>Vitesse moyenne :</strong> {average_speed:.2f} km/h</p>
-    <h2>Carte des positions GPS</h2>
     <div id="map"></div>
     <script>
         // Initialisation de la carte
-        var map = L.map('map').setView([{positions[0][0]}, {positions[0][1]}], 13);
+        var map = L.map('map').setView([{positions[0][0]:.6f}, {positions[0][1]:.6f}], 13);
 
-        // Ajouter une couche OpenStreetMap()
-        L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
-        {{
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
+        // Ajouter les tuiles OpenStreetMap
+        L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+            attribution: '© OpenStreetMap contributors'
         }}).addTo(map);
 
-        // Ajouter les positions GPS comme marqueurs sur la carte
-        var positions = {positions};
-        positions.forEach(function(pos) {{
-            L.marker([pos[0], pos[1]]).addTo(map)
-                .bindPopup('Vitesse: ' + pos[2].toFixed(2) + ' km/h');
-        }});
+        // Ajouter les positions sur la carte
+"""
+for lat, lon, speed in positions:
+    html_content += f"""
+        L.marker([{lat:.6f}, {lon:.6f}]).addTo(map)
+            .bindPopup("Vitesse : {speed:.2f} km/h");
+    """
+html_content += """
     </script>
 </body>
 </html>
 """
 
 # Sauvegarde du fichier HTML
-output_file = "resultats_carte.html"
+output_file = "carte.html"
 with open(output_file, "w") as file:
     file.write(html_content)
 
-print(f"Les résultats ont été enregistrés dans le fichier {output_file}.")
+print(f"La carte a été générée dans le fichier {output_file}.")
