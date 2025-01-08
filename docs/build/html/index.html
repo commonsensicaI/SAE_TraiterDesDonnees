@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fonctionnalités principales &#8212; Documentation TrameGPS 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=7a28dfa3"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=e6b791cb"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>D’accord, voici tout le code <cite>.rst</cite> prêt à être copié. Tu n’as qu’à coller directement dans ton fichier <cite>index.rst</cite> :</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>rst
+TrameGPS documentation
+======================</p>
+<p>Ce projet permet de traiter les données GPS extraites des trames NMEA pour calculer la distance parcourue et la vitesse moyenne. Il génère également une carte interactive à partir des données collectées.</p>
+<section id="fonctionnalites-principales">
+<h1>Fonctionnalités principales<a class="headerlink" href="#fonctionnalites-principales" title="Lien vers cette rubrique">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Conversion des coordonnées GPS</strong> : Conversion des coordonnées NMEA (format ddmm.mmmm) en degrés décimaux.</p></li>
+<li><p><strong>Calcul de la distance parcourue</strong> : Utilisation de la formule de Haversine pour calculer la distance entre deux points GPS.</p></li>
+<li><p><strong>Vitesse moyenne</strong> : Calcul de la vitesse moyenne à partir des vitesses enregistrées dans les trames.</p></li>
+<li><p><strong>Carte interactive</strong> : Génération d’une carte utilisant Leaflet pour afficher les positions GPS et les vitesses correspondantes.</p></li>
+</ul>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Lien vers cette rubrique">¶</a></h1>
+<ol class="arabic">
+<li><p>Clonez le dépôt ou téléchargez les fichiers du projet.</p></li>
+<li><p>Assurez-vous d’avoir Python installé.</p></li>
+<li><p>Installez les dépendances nécessaires en utilisant la commande suivante :</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span>
+<span class="pre">`</span></code></p>
+</li>
+</ol>
+</section>
+<section id="utilisation">
+<h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien vers cette rubrique">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Placez vos fichiers de trames NMEA dans le dossier <cite>data/</cite>.</p></li>
+<li><p>Exécutez le script <cite>trameGPS.py</cite> pour analyser les trames et générer les résultats.</p></li>
+<li><p>Les positions et vitesses seront affichées dans une carte interactive.</p></li>
+</ol>
+</section>
+<section id="exemple-de-code-python">
+<h1>Exemple de code Python<a class="headerlink" href="#exemple-de-code-python" title="Lien vers cette rubrique">¶</a></h1>
+<p>Voici un exemple de code Python pour traiter les trames NMEA :</p>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a>python
+import math</p>
+<dl>
+<dt>def nmea_to_decimal(coord, direction):</dt><dd><p>« «  »Convertit les coordonnées NMEA en degrés décimaux. » » »
+degrees = int(coord[:2])
+minutes = float(coord[2:])
+decimal = degrees + (minutes / 60)</p>
+<dl class="simple">
+<dt>if direction in [“S”, “W”]:</dt><dd><p>decimal = -decimal</p>
+</dd>
+</dl>
+<p>return decimal</p>
+</dd>
+<dt>def calculer_distance(lat1, lon1, lat2, lon2):</dt><dd><p>« «  »Calcule la distance entre deux points GPS en utilisant la formule de Haversine. » » »
+R = 6371  # Rayon de la Terre en km
+phi1 = math.radians(lat1)
+phi2 = math.radians(lat2)
+delta_phi = math.radians(lat2 - lat1)
+delta_lambda = math.radians(lon2 - lon1)</p>
+<p>a = math.sin(delta_phi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(delta_lambda / 2) ** 2
+c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))</p>
+<p>distance = R * c  # Distance en km
+return distance</p>
+</dd>
+</dl>
+<p># Exemple d’utilisation
+positions = []
+with open(« data/trames.nmea », « r ») as file:</p>
+<blockquote>
+<div><dl>
+<dt>for line in file:</dt><dd><dl>
+<dt>if line.startswith(« $GPRMC »):</dt><dd><p>fields = line.split(« , »)
+if fields[2] == « A »:</p>
+<blockquote>
+<div><p>lat = nmea_to_decimal(fields[3], fields[4])
+lon = nmea_to_decimal(fields[5], fields[6])
+speed = float(fields[7]) * 1.852  # Conversion de la vitesse en km/h
+positions.append((lat, lon, speed))</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p># Calcul de la distance totale parcourue
+distance_totale = 0
+for i in range(1, len(positions)):</p>
+<blockquote>
+<div><p>lat1, lon1, _ = positions[i - 1]
+lat2, lon2, _ = positions[i]
+distance_totale += calculer_distance(lat1, lon1, lat2, lon2)</p>
+</div></blockquote>
+<p>print(f »Distance totale parcourue: {distance_totale:.2f} km »)
+<a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
+</section>
+<section id="explication-du-code">
+<h1>Explication du code<a class="headerlink" href="#explication-du-code" title="Lien vers cette rubrique">¶</a></h1>
+<ol class="arabic simple">
+<li><p><strong>Fonction `nmea_to_decimal`</strong> : Cette fonction convertit les coordonnées NMEA en degrés décimaux. Elle prend en entrée la coordonnée et la direction (N/S ou E/O).</p></li>
+<li><p><strong>Fonction `calculer_distance`</strong> : Utilise la formule de Haversine pour calculer la distance entre deux points GPS en kilomètres.</p></li>
+<li><p><strong>Lecture des trames NMEA</strong> : Le code lit chaque ligne du fichier <cite>trames.nmea</cite>, extrait les coordonnées GPS et les vitesses.</p></li>
+<li><p><strong>Calcul de la distance totale</strong> : Une fois les positions extraites, le code calcule la distance totale parcourue en additionnant les distances entre chaque point.</p></li>
+</ol>
+</section>
+<section id="carte-interactive">
+<h1>Carte interactive<a class="headerlink" href="#carte-interactive" title="Lien vers cette rubrique">¶</a></h1>
+<p>Pour afficher les positions GPS sur une carte, vous pouvez utiliser la bibliothèque <cite>folium</cite>. Voici un exemple de code pour générer une carte interactive :</p>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a>python
+import folium</p>
+<p># Créer une carte centrée sur la première position
+map = folium.Map(location=[positions[0][0], positions[0][1]], zoom_start=12)</p>
+<p># Ajouter des marqueurs pour chaque position
+for pos in positions:</p>
+<blockquote>
+<div><p>folium.Marker([pos[0], pos[1]], popup=f »Vitesse: {pos[2]:.2f} km/h »).add_to(map)</p>
+</div></blockquote>
+<p># Sauvegarder la carte en fichier HTML
+map.save(« carte_interactive.html »)
+<a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a></p>
+<p>Ce code génère une carte interactive avec des marqueurs pour chaque position, incluant la vitesse à chaque point. La carte est sauvegardée sous le nom <cite>carte_interactive.html</cite>.</p>
+</section>
+<section id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Lien vers cette rubrique">¶</a></h1>
+<p>Le projet permet de traiter des trames NMEA, de calculer la distance parcourue, la vitesse moyenne, et d’afficher les données sur une carte interactive. Il utilise Python et plusieurs bibliothèques comme <cite>math</cite> pour les calculs et <cite>folium</cite> pour la visualisation. En suivant les instructions d’installation et d’utilisation, vous pourrez facilement analyser vos propres données GPS et générer des cartes.</p>
+</section>
+<section id="references">
+<h1>Références<a class="headerlink" href="#references" title="Lien vers cette rubrique">¶</a></h1>
+<ul class="simple">
+<li><p>[Documentation de Sphinx](<a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a>)</p></li>
+<li><p>[Folium Documentation](<a class="reference external" href="https://python-visualization.github.io/folium/">https://python-visualization.github.io/folium/</a>)</p></li>
+</ul>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">TrameGPS</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Emma, Manel.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
