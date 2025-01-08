@@ -21,7 +21,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
 # Lecture du fichier NMEA
 positions = []
-with open("trames.nmea", "r") as file:
+with open("../data/trames.nmea", "r") as file:
     for line in file:
         if line.startswith("$GPRMC"):
             fields = line.split(",")
